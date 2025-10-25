@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 //import './global_keys.dart';
 import 'package:mpey/businesses/bizA.dart';
 import 'package:mpey/businesses/bizB.dart';
+import 'package:mpey/businesses/frozen.dart';
 
 
 
@@ -16,6 +17,7 @@ class BusinessesDashboardState extends State<BusinessesDashboard> {
   final List<String> bizNames = [
     'OSCAR MOBILES',
     'WALTEX TECHNOLOGIES',
+    'FROZEN',
    
    
   ];
@@ -60,6 +62,15 @@ class BusinessesDashboardState extends State<BusinessesDashboard> {
                         context,
                         MaterialPageRoute(
                           builder: (context) => Waltexs(biz: 'WALTEX TECHNOLOGIES'),
+                        ),
+                      );
+                    }
+
+                    else if (bizNames[index] == 'FROZEN') {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => Frozen(biz: 'FROZEN'),
                         ),
                       );
                     }
