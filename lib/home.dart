@@ -8,10 +8,12 @@ import 'package:mpey/cargo/cargo_dashboard.dart';
 import 'package:mpey/chamas/chama_dashboard.dart';
 import 'package:mpey/insurance/insurance_dashboard.dart';
 import 'package:mpey/events/events_dashboard.dart';
-import 'package:mpey/church/church_dashboard.dart';
-import 'package:mpey/schoolfee/schools_dashboard.dart';
-import 'package:mpey/hospital/hospital_dashboard.dart';
+//import 'package:mpey/church/church_dashboard.dart';
+//import 'package:mpey/schoolfee/schools_dashboard.dart';
+//import 'package:mpey/hospital/hospital_dashboard.dart';
 import 'package:mpey/businesses/bizs_dashboard.dart';
+import 'package:mpey/water/water.dart';
+import 'package:mpey/electricity/electricity.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -138,13 +140,13 @@ class _HomeState extends State<Home> {
               fontSize: screenWidth * 0.045,
               margin: EdgeInsets.only(left: screenWidth * 0.04, top: screenHeight * 0.02),
             ),
-            //_buildDrawerItem(
-              //context: context,
-              //title: //'Chama Remittances',
-              //destination: const ChamaDashboard(),
-              //fontSize: screenWidth * 0.045,
-              //margin: EdgeInsets.only(left: screenWidth * 0.04, top: screenHeight * 0.02),
-            //),
+            _buildDrawerItem(
+              context: context,
+              title: 'Chama Remittances',
+              destination: const ChamaDashboard(),
+              fontSize: screenWidth * 0.045,
+              margin: EdgeInsets.only(left: screenWidth * 0.04, top: screenHeight * 0.02),
+            ),
             _buildDrawerItem(
               context: context,
               title: 'Insurance Premiums',
@@ -152,20 +154,20 @@ class _HomeState extends State<Home> {
               fontSize: screenWidth * 0.045,
               margin: EdgeInsets.only(left: screenWidth * 0.04, top: screenHeight * 0.02),
             ),
-            //_buildDrawerItem(
-              //context: context,
-              //title: 'Church Remittances',
-              //destination: const ChurchDashboard(),
-              //fontSize: screenWidth * 0.045,
-              //margin: EdgeInsets.only(left: screenWidth * 0.04, top: screenHeight * 0.02),
-            //),
-            //_buildDrawerItem(
-              //context: context,
-              //title: 'School Fees',
-              //destination: const SchoolDashboard(),
-              //fontSize: screenWidth * 0.045,
-              //margin: EdgeInsets.only(left: screenWidth * 0.04, top: screenHeight * 0.02),
-            //),
+            _buildDrawerItem(
+              context: context,
+              title: 'Water Bills',
+              destination: const WaterBills(),
+              fontSize: screenWidth * 0.045,
+              margin: EdgeInsets.only(left: screenWidth * 0.04, top: screenHeight * 0.02),
+            ),
+            _buildDrawerItem(
+              context: context,
+              title: 'Electricity Bills',
+              destination: const Electricity(),
+              fontSize: screenWidth * 0.045,
+              margin: EdgeInsets.only(left: screenWidth * 0.04, top: screenHeight * 0.02),
+            ),
             //_buildDrawerItem(
               //context: context,
               //title: 'Hospitals',
