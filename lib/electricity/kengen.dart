@@ -46,7 +46,7 @@ class _KengenPowerState extends State<KengenPower> {
     setState(() => _isLoading = true);
     final formattedPhone = _formatPhoneNumber(_phoneController.text);
 
-    final url = Uri.parse('https://test-mpay.onrender.com/mpesa/water/stk_push.php');
+    final url = Uri.parse('https://test-mpay.onrender.com/mpesa/electricity/stk_push.php');
     final response = await http.post(
       url,
       headers: {
